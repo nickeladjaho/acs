@@ -5,7 +5,7 @@
 <p> This is the repository for the University of Essex's African and Caribbean Society (ACS) website.</p>
 
 <p> 
-    ACS-Essex is a single-page web application written using the Django Frameowork (version 2.1.2)
+    ACS-Essex is a single-page web application written using the Django Frameowork - version 3.
 </p>.
 
 <h3><strong>Future improvements and additions:</strong></h3>

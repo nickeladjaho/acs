@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About ACS Essex {% endblock title %}
+                    
+{% block content %}
+<div class='page-wrap'>
+    <div class='intro-main'>
+        <article class='a'> 
+            <p> 
+                We are the African and Caribbean Society (ACS) of the University of Essex. 
+                We are a student-run organisation that aims to enlighten, entertain and support our fellow student members.
+                We are diverse. Really. There are 45 African countries. 26 Caribbean countries. 
+            </p>    
+                We have members born in the UK with parents born in Africa; members born in Africa 
+                with parents born in the UK; there are students members without blood relation to the 
+                ountries but whom have an interest in the vast and rich African and Caribbean culture.
+                This is only a small sample of the many combinations of people that we are proud to represent in ACS Essex.
+        </article>
+        <div class="b"> 
+            <img src = "{% static 'images/essextree.jpg' %}" width="400" height="250">                      
+        </div>   
+        <div class="c"> 
+            <img src = "{% static 'images/essexchalks.jpg' %}" width="400" height="250">                      
+        </div>   
+        <article class='d'> 
+                The Society hold a range of regular events, showcases and panels with the aspiration of 
+                enriching the lives of everyone associated with the ACS.
+                Enrich how? Making friends. Eating dishes from African and Caribbean countries. 
+                Participating in or attending dance-offs, panels on British Afro-Car culture. 
+                Learning the society's secret handshake. Eating African and Caribbean food.   
+                Infinities exit! Thus, we at ACS Essex will forever strive for an improved ACS Essex
+                experience.
+                
+                <p> 
+                    We welcome members from all nationalities and backgrounds to join us in our celebration,
+                    reflections and continuation of African and Caribbean culture.
+                </p>
+        
+        </article>
+    </div>
+
+</div>
+
+
+{% endblock%}

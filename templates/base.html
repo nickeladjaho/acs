@@ -1,0 +1,107 @@
+<!-- base page that contains the look-and-feel of the site -->
+<!-- <div class= "landing-grid-container"> -->
+<!DOCTYPE html>
+
+{% load static %}
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png"  href="{% static 'images/notice.png'%}">
+        <title> {% block title %} Afro-Caribbean Society Essex {% endblock title %} </title> 
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}" >
+        <link rel="stylesheet" href="{% static 'css/events.css' %}" >
+        <link rel="stylesheet" href="{% static 'css/post_list.css' %}" >
+        <link rel="stylesheet" href="{% static 'css/post_detail.css' %}" >
+        <link rel="stylesheet" href="{% static 'css/about.css' %}" >
+        <link rel="stylesheet" href="{% static 'css/contact.css' %}" >
+        <!--<link rel="stylesheet" {% block stylesheet %} href="{% static 'css/plain.css' %}" {% endblock %}>-->
+        <!-- <link rel="shortcut icon" href="{% static 'images/flower'%}" type="image/x-icon">  -->
+        <meta property="og:description" content= "ACS Essex illuminates the latest news, events and 
+        community goals from Essex University's African and Carribbean Society.">
+        <meta property="og:title" content="ACS Essex"> 
+        <meta name="author" content="Nicholas Adjaho">                                         
+    </head> 
+
+    <body>
+        <header>
+            <div class="flex-headbar justify-between">
+                <!--iseert <a href="{% url 'home' %}" style="text-decoration:none"> ACS Essex </a>  when we  acs logo -->
+                <h2 class="curr-logo-positon"> ACS Essex</h2>
+                <a class="mid-header" href="{% url 'home' %}">Home</a> 
+                <a class="mid-header" href="{% url 'events_main' %}">Events</a>
+                <a class="mid-header" href="{% url 'post_list' %}">Blog</a>
+                <a class="mid-header" href="{% url 'about' %}">About</a> 
+                <a class="mid-header" href="{% url 'contact' %}">Play</a>    
+                {% if user.is_authenticated %}
+                    Hey, {{ user.username }}! 
+                <a class="right-header"href="{% url 'logout' %}">Log Out</a></p>
+                {% else %}
+                    <a class="right-header" href="{% url 'signup' %}">Sign Up</a> <a class="right-header" href="{% url 'login' %}">Log In</a> 
+                {% endif %}
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+
+
+        <footer class='footer-wrap'>
+          <div class='footer-flexwrapper'>
+              <div class="flexwrap-logo">
+                   <h3> ACS logo <h3>
+                     <div class="img"> Insert Image </div>   
+              </div>
+
+              <div class="flexwrap-contact">
+                 <h3>Contact</h3>
+                    <div class="innerwrap-contact">
+                      <section class="addresses">
+                          <div class="mail-contact"> Univerity Address </div>
+                          <div class="email"> ACS email </div>
+                      </section>
+                    </div>
+              </div>
+           </div>
+        </footer>
+    </body>
+</html>
+ 
+
+<!--footer contact
+        <footer class='footer_block'>
+            <div class='foot_site_nav'>
+                <ul class='menu'>
+                    <li class='name_of_sub_menu'> 
+                        <span class="insert_section"> Insert menu item name </span>
+                    <ul class="sub-menu">
+                        <li class="first_sub_item"> First </li>
+                        <li class="second_sub_item"> Second </li>
+                    </ul>
+                    
+
+                    <li class='new_subname'> 
+                        <span class="insert_section"> Contact Information </span>
+                    <ul class="sub-menu">
+                        <li class="one_sub"> Contact 1 </li>
+                        <li class="two_sub">Contact 2 </li>
+                    </ul>
+                </ul>
+            </div>
+        </footer>
+
+
+        <footer class='footer-wrapper'>
+            <div class='footer-block'>
+             <h3>Contact</h3>
+             <div class="flexwrap-contact">
+                <div class="list">
+                  <ul>
+                  <li> Univerity Address </li>
+                  <li> UK </li>
+                  <li> ACS email </li>
+                  </ul>
+                  </div>
+             </div>
+            </div>
+                    <h3> ACS logo <h3>
+                   <div class="img"> Insert Image </div>
+-->

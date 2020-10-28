@@ -1,0 +1,37 @@
+
+
+.page_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    ".  post_title  ."
+    ".  post_img  . "
+    ".  post_author  ."
+    ".  post_file_box  .";
+}
+
+h2 {
+    grid-area: post_title;
+}
+.post_img {
+    grid-area: post_img;
+    width: 65%;
+    height: 75%;
+}
+
+.author {
+    grid-area: post_author;
+}
+
+.post_file_box{
+    grid-area: post_file_box;
+    grid-template-columns: 1fr;
+    grid-template-areas: " load_file ";
+}
+
+.load_file {
+    grid-area: load_file;
+}
+
+
+

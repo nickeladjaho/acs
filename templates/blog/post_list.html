@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% comment "release when function written" %}
+nest individual blog post list under a link tag that is enclosed in a div for each post 
+{% endcomment %}
+{% block title %}ACS Blog{% endblock title %}
+
+{% block content %}
+<div class='main-wrap'>
+  <div class="main_page">
+      <h2 class='page_headline'> Blog </h2>
+      <div class='grid_posts_container'>   
+        {% for post in post_list %}
+          <div class='b_listing'>
+            <p><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></p>
+            <p>{{ post.tagline }} </p>
+          </div>
+          {% endfor %}
+      </div> 
+  </div>
+</div>  
+{% endblock %}    
+    

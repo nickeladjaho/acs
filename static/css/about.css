@@ -1,0 +1,30 @@
+/* about page */
+body {
+    font-size: 1.6em;
+}
+
+
+
+.intro-main {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-areas: ". one three . "
+                         ". two four . " ;
+    gap: 30px;
+}
+
+.a {
+    grid-area: one;
+}
+
+.b {
+    grid-area: two;
+}
+
+.c {
+    grid-area: three;
+}
+
+.d {
+    grid-area: four;
+}

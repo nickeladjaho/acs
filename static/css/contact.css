@@ -1,0 +1,41 @@
+
+.pagewrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 100px;
+    grid-template-areas: " item1  item2 "
+                         " .  . ";
+}
+
+.notnested {
+    grid-area: item1;
+}
+
+.nested1 {
+    grid-area: item2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "pic x1 x4"
+                         "x3 x2 . ";
+    gap: 30px;
+}   
+
+.pic {
+    grid-area: pic;
+}
+
+.x1 {
+    grid-area: x1;
+}
+
+.x2 {
+    grid-area: x2;
+}
+
+.x3 {
+    grid-area: x3;
+}
+
+.x4 {
+    grid-area: x4;
+}

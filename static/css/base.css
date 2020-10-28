@@ -1,0 +1,60 @@
+/* Arbritray comments */
+html {
+    font-size: 10px;
+    background-image: linear-gradient(darkseagreen, rosybrown);
+}
+
+.body {
+    font-size: 1.6rem;
+   
+}
+.flex-headbar {
+    display: flex;
+    align-items: center;
+
+}
+
+h2 {
+    flex: 1;
+    color:#2F4F4F;
+}
+
+.mid-header {
+    flex:0.33;
+    color: #2F4F4F;
+}
+
+.right-header {
+    flex:0.2;
+    color: #2F4F4F;
+}
+
+
+
+
+
+.footer-flexwrapper {
+    display: flex;
+    background-color: transparent;
+
+}
+
+.flexwrap-logo {
+    display: flex;
+    flex-direction: column;
+    flex:0.5;
+}
+
+
+
+.flexwrap-contact{
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+}
+
+.innerwrap-contact{
+    display: flex;
+    flex-direction: column;
+
+}

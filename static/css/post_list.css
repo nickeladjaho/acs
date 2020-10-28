@@ -1,0 +1,27 @@
+
+
+.main_page {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    ". page_headline  ."
+    ". posts_list .";
+    font-size: 1.6rem;
+
+}
+
+.page_headline {
+    grid-area: page_headline;
+    color: slateblue;
+}
+
+.grid_posts_container {
+    grid-area: posts_list;
+    display: grid;
+    grid-template-columns: auto;   
+
+}
+
+a:link {
+    text-decoration: none;
+  }

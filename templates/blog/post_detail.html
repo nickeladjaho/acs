@@ -1,0 +1,31 @@
+<!--view individual blog posts -->
+{% extends 'base.html' %}
+{% load blog_extras %}
+
+{% block content %}
+
+<div class='mains-content'>
+   <div class='page_wrapper'>
+        <h2>{{ post.title }}</h2>
+        
+        {% if post.photo != "" %}
+                <img class='post_img' src="{{ post.photo.url}}"> 
+        {% endif %}
+        
+        <p class='author'>{{post.author}} </p>
+        
+        <div class='post_file_box'>
+                {% for line in  post.blog_content_file%}
+                {% comment 'remove \n char' %} {{line = line.rstrip()}} {% endcomment %}
+                        <p class='load_file'> {{line}} </p>
+                {% endfor %}
+        </div>
+
+        
+   </div>
+</div>
+ {% endblock content %}
+
+
+
+

@@ -1,0 +1,24 @@
+/*  comment */
+/*  add padding to landing-image */
+/* @media */
+ 
+.home-center {
+    display: grid;
+    grid-template-areas: " filler landing-image  heading2 ";
+    grid-template-columns: 2fr 2fr 2fr;
+    
+    column-gap:50px;
+    
+}
+
+.landing-image {
+    grid-area: landing-image;
+}
+
+.heading2 {
+    grid-area: heading2;
+}
+
+.filler {
+    grid-area:filler;
+}

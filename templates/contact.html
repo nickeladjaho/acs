@@ -1,0 +1,22 @@
+<!--this page will now be converted to a footer at the bottom of the page. Temp PLAY Page -->
+{% extends 'base.html' %}
+
+{% block content %} 
+
+
+ <div class='pagewrapper'>
+    <div class='notnested'> item1 </div>
+    <div class='nested1'>
+        <div class='x1'>One</div>
+        <div class="x2">Two</div>
+        <div class="x3">string</div>
+        <div class="x4">Four</div>
+        {% load static %}
+        <div class="pic"> 
+            <img src = "{% static 'images/essexchalks.jpg' %}" width="300" height="200">                      
+        </div>      
+    </div>
+</div>
+
+ {% endblock %}
+

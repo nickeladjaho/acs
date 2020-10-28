@@ -1,0 +1,24 @@
+<!--https://www.lse.ac.uk/Events/Search-Events-->
+<!--https://www.lsesu.com/whatson/  http://web.archive.org/web/20130920105917/http://www.code-sucks.com/code/javascript/template.php?tutorial=basic_calendar.php-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ACS Events{% endblock title %}
+
+{% block content %}
+<div class='main_wrap'>
+  <div class='whole_page_grid'>
+     <h2 class='calender_sec_name'> ACS Events Calender </h2>
+        <div class='event_posts_container'>
+        {% for events in all_events_list %}
+            <div class='enumerate_posts'>
+              <p>{{ events.title }} 
+              <p> {{events.event_description}}<p>
+            </div>
+        {% endfor %}
+        </div>
+
+   </div>
+</div>
+ {% endblock%}
+

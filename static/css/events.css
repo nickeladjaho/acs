@@ -1,0 +1,19 @@
+
+.whole_page_grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    ". section_name .  "
+    ". posts_block  .";
+}
+
+
+.calender_sec_name {
+    grid-area: section_name;
+}
+
+.event_posts_container {
+    grid-area: posts_block;
+    display: grid;
+    grid-template-columns: auto;
+}
